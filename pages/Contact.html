@@ -14,7 +14,7 @@
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
         <link rel="icon" type="image/png" href="./assets/img/favicon.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport" />
         
         <!--     Fonts and icons     -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md-5 ml-auto">
                   <div class="card card-contact">
-                    <form id="contact-form" method="post">
+                    <form id="contact-form" action="http://localhost:8080/mail" method="POST">
                       <div class="card-header card-header-raised card-header-primary text-center">
                         <h4 class="card-title">Contact Us</h4>
                       </div>
@@ -120,14 +120,14 @@
                           <div class="col-md-6">
                             <div class="form-group label-floating is-empty">
                               <label class="bmd-label-floating">First name</label>
-                              <input type="text" name="name" class="form-control">
+                              <input type="text" name="fname" class="form-control">
                               <span class="material-input"></span>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group label-floating is-empty">
                               <label class="bmd-label-floating">Last name</label>
-                              <input type="text" name="name" class="form-control">
+                              <input type="text" name="lname" class="form-control">
                               <span class="material-input"></span>
                             </div>
                           </div>
