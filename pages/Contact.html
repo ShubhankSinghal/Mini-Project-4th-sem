@@ -113,39 +113,39 @@
                                         <div class="col-md-6">
                                             <div class="form-group label-floating is-empty">
                                                 <label class="bmd-label-floating">First name</label>
-                                                <input type="text" name="fname" class="form-control">
+                                                <input type="text" id="fname" name="fname" class="form-control">
                                                 <span class="material-input"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group label-floating is-empty">
                                                 <label class="bmd-label-floating">Last name</label>
-                                                <input type="text" name="lname" class="form-control">
+                                                <input type="text" id="lname" name="lname" class="form-control">
                                                 <span class="material-input"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group label-floating is-empty">
                                         <label class="bmd-label-floating">Email address</label>
-                                        <input type="email" name="email" class="form-control">
+                                        <input type="email" id="email" name="email" class="form-control">
                                         <span class="material-input"></span>
                                     </div>
                                     <div class="form-group label-floating is-empty">
                                         <label for="exampleMessage1" class="bmd-label-floating">Your Message</label>
-                                        <textarea name="message" class="form-control" id="exampleMessage1" rows="6"></textarea>
+                                        <textarea name="message" id="message" class="form-control" rows="6"></textarea>
                                         <span class="material-input"></span>
                                     </div>
                                 </div>
                                 <div class="card-footer justify-content-between">
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" value=""> I'm not a robot
+                                            <input class="form-check-input" id="checkbox" type="checkbox" value=""> I'm not a robot
                                             <span class="form-check-sign">
                                             <span class="check"></span>
                                             </span>
                                         </label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary pull-right">Send Message</button>
+                                    <button type="submit" id="submit" class="btn btn-primary pull-right" onclick="return validation()" disabled="disabled">Send Message</button>
                                 </div>                               
                             </form>
                         </div>
@@ -202,6 +202,24 @@
         <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
         <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
         <script src="../assets/js/material-kit.js?v=2.2.0" type="text/javascript"></script>
+        <script>
+
+            function validation(){
+                var fname = document.getElementById("contact-form").fname.value;
+                var lname = document.getElementById("contact-form").lname.value;
+                var email = document.getElementById("contact-form").email.value;
+                var message = document.getElementById("contact-form").message.value;
+                if( fname === '' || lname === '' || email === '' || message === ''){
+                    alert("Please fill all fields...!!!!!!");
+                    return false;
+                }
+            }
+
+            $("#checkbox").click(function () {
+                $("#submit").attr("disabled", !this.checked);
+            });       
+
+        </script>
     
       </body>
 </html>
