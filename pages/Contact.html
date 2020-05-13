@@ -139,7 +139,7 @@
                                 <div class="card-footer justify-content-between">
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input class="form-check-input" id="checkbox" type="checkbox" value=""> I'm not a robot
+                                            <input class="form-check-input" id="checkbox" onclick="check()" type="checkbox" value=""> I'm not a robot
                                             <span class="form-check-sign">
                                             <span class="check"></span>
                                             </span>
@@ -215,9 +215,9 @@
                 }
             }
 
-            $("#checkbox").click(function () {
-                $("#submit").attr("disabled", !this.checked);
-            });       
+            function check(){
+                document.getElementById("submit").disabled = !document.getElementById("checkbox").checked;
+            }      
 
         </script>
     
