@@ -16,10 +16,43 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
                 <!-- CSS Files -->
         <link href="../assets/css/material-kit.css?v=2.2.0" rel="stylesheet" />
+
+        <style>
+            #success{
+                display: none;
+            }
+            #failure{
+                display: none;
+            }
+        </style>
          
     </head>
 
     <body style="overflow-x: hidden;">
+
+        <div id="success" class="alert alert-success">
+            <div class="container">
+                <div class="alert-icon">
+                    <i class="material-icons">check</i>
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+                <b>Success: </b> Your response has been received.
+            </div>
+        </div>
+
+        <div id="failure" class="alert alert-danger">
+            <div class="container">
+                <div class="alert-icon">
+                    <i class="material-icons">error_outline</i>
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+                <b>Error:</b> Your response is not sent. Please check your Internet Connection. If error PERSIST, let us know!
+            </div>
+        </div>
 
         <nav class="navbar navbar-default navbar-expand-lg" role="navigation-demo">
             <div class="container">
@@ -213,6 +246,7 @@
                     alert("Please fill all fields...!!!!!!");
                     return false;
                 }
+                document.getElementById("success").display = "block";
             }
 
             function check(){
